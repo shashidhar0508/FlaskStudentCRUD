@@ -315,10 +315,10 @@ $(document).ready(function(){
                 {% for employee in employees %}
                 <tr>
                     <td>{{employee.id}}</td>
-                    <td>{{employee.eid}}</td>
-                    <td>{{employee.ename}}</td>
+                    <td>{{employee.empid}}</td>
+                    <td>{{employee.empname}}</td>
                     <td>{{employee.email}}</td>
-                    <td>{{employee.econtact}}</td>
+                    <td>{{employee.phoneno}}</td>
                     <td>
                         <a href="/update/{{employee.id}}" class="edit" data-toggle="modal"
                            data-target="#editEmployeeModal{{employee.id}}">
@@ -343,12 +343,12 @@ $(document).ready(function(){
                                     <div class="form-group">
                                         <label>Employee ID</label>
                                         <input type="hidden" name="id" value="{{employee.id}}">
-                                        <input type="text" class="form-control" name="eid" value={{employee.eid}}
+                                        <input type="text" class="form-control" name="eid" value={{employee.empid}}
                                                required>
                                     </div>
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control" name="ename" value={{employee.ename}}
+                                        <input type="text" class="form-control" name="ename" value={{employee.empname}}
                                                required>
                                     </div>
                                     <div class="form-group">
@@ -359,7 +359,7 @@ $(document).ready(function(){
                                     <div class="form-group">
                                         <label>Phone</label>
                                         <input type="text" class="form-control" name="econtact"
-                                               value={{employee.econtact}} required>
+                                               value={{employee.phoneno}} required>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
